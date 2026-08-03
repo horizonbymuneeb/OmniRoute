@@ -30,8 +30,8 @@ jobs:
         with:
           context: .
           target: runner-base
-          platforms: linux/amd64
+          platforms: linux/arm64
           push: true
           tags: ghcr.io/horizonbymuneeb/omniroute:omni2-agy-c028e2f
-          cache-from: type=gha,scope=omni2-agy-amd64
-          cache-to: type=gha,scope=omni2-agy-amd64,mode=max
+          cache-from: type=gha,scope=omni2-agy-arm64
+          cache-to: type=gha,scope=omni2-agy-arm64,mode=max
