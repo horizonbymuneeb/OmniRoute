@@ -1,0 +1,175 @@
+{
+  "communities": {
+    "0": [
+      "patches_open_sse_0jdsfef",
+      "patches_open_sse_0jdsfef_d",
+      "patches_open_sse_0jdsfef_e",
+      "patches_open_sse_0jdsfef_g",
+      "patches_open_sse_0jdsfef_m",
+      "patches_open_sse_0jdsfef_n",
+      "patches_open_sse_0jdsfef_p"
+    ],
+    "1": [
+      "patches_open_sse_0sifrof",
+      "patches_open_sse_0sifrof_d",
+      "patches_open_sse_0sifrof_e",
+      "patches_open_sse_0sifrof_g",
+      "patches_open_sse_0sifrof_m",
+      "patches_open_sse_0sifrof_n",
+      "patches_open_sse_0sifrof_p"
+    ],
+    "2": [
+      "patches_src_02tligt",
+      "patches_src_02tligt_c",
+      "patches_src_02tligt_f",
+      "patches_src_02tligt_n",
+      "patches_src_02tligt_o",
+      "patches_src_02tligt_r",
+      "patches_src_02tligt_s"
+    ],
+    "3": [
+      "patches_src_02tligt_d",
+      "patches_src_02tligt_i",
+      "patches_src_02tligt_l",
+      "patches_src_02tligt_p",
+      "patches_src_02tligt_u"
+    ],
+    "4": [
+      "patches_open_sse_0jdsfef_a",
+      "patches_open_sse_0jdsfef_u",
+      "patches_open_sse_0jdsfef_y"
+    ],
+    "5": [
+      "patches_open_sse_0sifrof_a",
+      "patches_open_sse_0sifrof_u",
+      "patches_open_sse_0sifrof_y"
+    ],
+    "6": [
+      "patches_src_shared_0xd49oi",
+      "patches_src_shared_0xd49oi_c",
+      "patches_src_shared_0xd49oi_r"
+    ],
+    "7": [
+      "patches_open_sse_0jdsfef_c",
+      "patches_open_sse_0jdsfef_f"
+    ],
+    "8": [
+      "patches_open_sse_0sifrof_c",
+      "patches_open_sse_0sifrof_f"
+    ],
+    "9": [
+      "run",
+      "run_sh__entry"
+    ]
+  },
+  "cohesion": {
+    "0": 0.3333333333333333,
+    "1": 0.3333333333333333,
+    "2": 0.2857142857142857,
+    "3": 0.5,
+    "4": 0.6666666666666666,
+    "5": 0.6666666666666666,
+    "6": 0.6666666666666666,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0
+  },
+  "gods": [
+    {
+      "id": "patches_src_02tligt_d",
+      "label": "d()",
+      "degree": 4
+    },
+    {
+      "id": "patches_src_02tligt_p",
+      "label": "p()",
+      "degree": 4
+    },
+    {
+      "id": "patches_src_02tligt_u",
+      "label": "u()",
+      "degree": 3
+    },
+    {
+      "id": "patches_open_sse_0jdsfef_u",
+      "label": "u()",
+      "degree": 3
+    },
+    {
+      "id": "patches_open_sse_0jdsfef_y",
+      "label": "y()",
+      "degree": 3
+    },
+    {
+      "id": "patches_open_sse_0sifrof_u",
+      "label": "u()",
+      "degree": 3
+    },
+    {
+      "id": "patches_open_sse_0sifrof_y",
+      "label": "y()",
+      "degree": 3
+    },
+    {
+      "id": "patches_open_sse_0jdsfef_f",
+      "label": "f()",
+      "degree": 3
+    },
+    {
+      "id": "patches_open_sse_0sifrof_f",
+      "label": "f()",
+      "degree": 3
+    },
+    {
+      "id": "patches_open_sse_0jdsfef_d",
+      "label": "d()",
+      "degree": 2
+    }
+  ],
+  "surprises": [
+    {
+      "source": "y()",
+      "target": "f()",
+      "source_files": [
+        "patches/open-sse_0jdsfef._.js",
+        "patches/open-sse_0jdsfef._.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "note": "Bridges community 4 → community 7"
+    },
+    {
+      "source": "y()",
+      "target": "f()",
+      "source_files": [
+        "patches/open-sse_0sifrof._.js",
+        "patches/open-sse_0sifrof._.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "note": "Bridges community 5 → community 8"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `d()` connect `Community 3` to `Community 2`?",
+      "why": "High betweenness centrality (0.001) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `p()` connect `Community 3` to `Community 2`?",
+      "why": "High betweenness centrality (0.001) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `u()` connect `Community 4` to `Community 0`?",
+      "why": "High betweenness centrality (0.001) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `run.sh script` to the rest of the system?",
+      "why": "1 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}

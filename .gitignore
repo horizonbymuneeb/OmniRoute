@@ -1,0 +1,81 @@
+# Shared .gitignore for every Alian app repo.
+# Copied into each app dir by tools/push_repos.py before the first commit.
+#
+# Rule: commit the code you wrote and the config that describes it. Never commit
+# anything that can be reinstalled, regenerated, or downloaded.
+
+# --- dependencies (reinstallable from requirements.txt / package.json) ---
+node_modules/
+venv/
+.venv/
+env/
+ENV/
+vendor/
+.bundle/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# --- build output ---
+dist/
+build/
+.next/
+out/
+target/
+*.tsbuildinfo
+
+# --- compiled binaries and downloaded artifacts (see each app's REBUILD.md) ---
+*.so
+*.dylib
+*.dll
+*.exe
+*.bin
+*.onnx
+*.tar.gz
+*.tgz
+*.zip
+*.AppImage
+# Obscura ships two compiled binaries and the tarball they came from.
+obscura/obscura
+obscura/obscura-worker
+# Whisper model, pulled from HuggingFace on first run.
+/captcha-solver-api/models/
+
+# --- runtime databases and logs ---
+# Databases go to Google Drive on a schedule, not to git: a binary SQLite file in
+# git is unreviewable, unmergeable, and grows without bound. The user's request to
+# "include data/" is honoured by that backup, not by committing .db files.
+/*.db
+/*.sqlite
+*.db-journal
+*.db-wal
+*.db-shm
+*.log
+logs/
+tmp/
+.cache/
+
+# --- secrets ---
+# Values live in the age-encrypted bundle (see REPO-MANIFEST.md), never in git.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials.json
+service-account*.json
+
+# --- editor and agent state ---
+.DS_Store
+.idea/
+.vscode/
+*.swp
+.hermes/cache/
+*.session.json
+transcript_*.txt
+
+# --- app-specific (omniroute) ---
